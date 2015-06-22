@@ -18,10 +18,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func didTouchWalkButton(sender: UIButton) {
+        self.kevView.removeAllAnimations()
         self.kevView.addWalkingAnimation()
     }
 
     @IBAction func didTouchFadeInButton(sender: UIButton) {
+        self.kevView.removeAllAnimations()
         self.kevView.addFadeInAnimation()
     }
 }

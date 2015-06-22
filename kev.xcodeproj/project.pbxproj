@@ -13,12 +13,12 @@
 		B9C8999F1B3811C3009C4740 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C8999E1B3811C3009C4740 /* Images.xcassets */; };
 		B9C899A21B3811C3009C4740 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C899A01B3811C3009C4740 /* LaunchScreen.xib */; };
 		B9C899AE1B3811C3009C4740 /* kevTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C899AD1B3811C3009C4740 /* kevTests.swift */; };
-		B9C899B81B3811FC009C4740 /* KevView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C899B71B3811FC009C4740 /* KevView.swift */; };
-		B9C899CA1B38185E009C4740 /* body.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899C51B38185E009C4740 /* body.png */; };
-		B9C899CB1B38185E009C4740 /* left foot.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899C61B38185E009C4740 /* left foot.png */; };
-		B9C899CC1B38185E009C4740 /* left thigh.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899C71B38185E009C4740 /* left thigh.png */; };
-		B9C899CD1B38185E009C4740 /* right foot.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899C81B38185E009C4740 /* right foot.png */; };
-		B9C899CE1B38185E009C4740 /* right thigh.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899C91B38185E009C4740 /* right thigh.png */; };
+		B9C899D61B38A440009C4740 /* KevView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C899D51B38A440009C4740 /* KevView.swift */; };
+		B9C899DE1B38A481009C4740 /* body.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899D91B38A481009C4740 /* body.png */; };
+		B9C899DF1B38A481009C4740 /* left foot.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899DA1B38A481009C4740 /* left foot.png */; };
+		B9C899E01B38A481009C4740 /* left thigh.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899DB1B38A481009C4740 /* left thigh.png */; };
+		B9C899E11B38A481009C4740 /* right foot.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899DC1B38A481009C4740 /* right foot.png */; };
+		B9C899E21B38A481009C4740 /* right thigh.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899DD1B38A481009C4740 /* right thigh.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,12 +42,12 @@
 		B9C899A71B3811C3009C4740 /* kevTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kevTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C899AC1B3811C3009C4740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C899AD1B3811C3009C4740 /* kevTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kevTests.swift; sourceTree = "<group>"; };
-		B9C899B71B3811FC009C4740 /* KevView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KevView.swift; sourceTree = "<group>"; };
-		B9C899C51B38185E009C4740 /* body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = body.png; sourceTree = "<group>"; };
-		B9C899C61B38185E009C4740 /* left foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left foot.png"; sourceTree = "<group>"; };
-		B9C899C71B38185E009C4740 /* left thigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left thigh.png"; sourceTree = "<group>"; };
-		B9C899C81B38185E009C4740 /* right foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right foot.png"; sourceTree = "<group>"; };
-		B9C899C91B38185E009C4740 /* right thigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "right thigh.png"; sourceTree = "<group>"; };
+		B9C899D51B38A440009C4740 /* KevView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KevView.swift; path = Animations/KevView/KevView.swift; sourceTree = "<group>"; };
+		B9C899D91B38A481009C4740 /* body.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = body.png; path = Animations/KevView/images/body.png; sourceTree = "<group>"; };
+		B9C899DA1B38A481009C4740 /* left foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "left foot.png"; path = "Animations/KevView/images/left foot.png"; sourceTree = "<group>"; };
+		B9C899DB1B38A481009C4740 /* left thigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "left thigh.png"; path = "Animations/KevView/images/left thigh.png"; sourceTree = "<group>"; };
+		B9C899DC1B38A481009C4740 /* right foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "right foot.png"; path = "Animations/KevView/images/right foot.png"; sourceTree = "<group>"; };
+		B9C899DD1B38A481009C4740 /* right thigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "right thigh.png"; path = "Animations/KevView/images/right thigh.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,12 +89,7 @@
 		B9C899941B3811C3009C4740 /* kev */ = {
 			isa = PBXGroup;
 			children = (
-				B9C899C51B38185E009C4740 /* body.png */,
-				B9C899C61B38185E009C4740 /* left foot.png */,
-				B9C899C71B38185E009C4740 /* left thigh.png */,
-				B9C899C81B38185E009C4740 /* right foot.png */,
-				B9C899C91B38185E009C4740 /* right thigh.png */,
-				B9C899B71B3811FC009C4740 /* KevView.swift */,
+				B9C899E31B38A486009C4740 /* Animations */,
 				B9C899971B3811C3009C4740 /* AppDelegate.swift */,
 				B9C899991B3811C3009C4740 /* ViewController.swift */,
 				B9C8999B1B3811C3009C4740 /* Main.storyboard */,
@@ -128,6 +123,35 @@
 				B9C899AC1B3811C3009C4740 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B9C899D71B38A461009C4740 /* KevView */ = {
+			isa = PBXGroup;
+			children = (
+				B9C899D81B38A470009C4740 /* Images */,
+				B9C899D51B38A440009C4740 /* KevView.swift */,
+			);
+			name = KevView;
+			sourceTree = "<group>";
+		};
+		B9C899D81B38A470009C4740 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				B9C899D91B38A481009C4740 /* body.png */,
+				B9C899DA1B38A481009C4740 /* left foot.png */,
+				B9C899DB1B38A481009C4740 /* left thigh.png */,
+				B9C899DC1B38A481009C4740 /* right foot.png */,
+				B9C899DD1B38A481009C4740 /* right thigh.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		B9C899E31B38A486009C4740 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				B9C899D71B38A461009C4740 /* KevView */,
+			);
+			name = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,13 +234,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C899CD1B38185E009C4740 /* right foot.png in Resources */,
-				B9C899CB1B38185E009C4740 /* left foot.png in Resources */,
+				B9C899E11B38A481009C4740 /* right foot.png in Resources */,
+				B9C899DF1B38A481009C4740 /* left foot.png in Resources */,
 				B9C8999D1B3811C3009C4740 /* Main.storyboard in Resources */,
-				B9C899CA1B38185E009C4740 /* body.png in Resources */,
-				B9C899CE1B38185E009C4740 /* right thigh.png in Resources */,
+				B9C899DE1B38A481009C4740 /* body.png in Resources */,
+				B9C899E21B38A481009C4740 /* right thigh.png in Resources */,
 				B9C899A21B3811C3009C4740 /* LaunchScreen.xib in Resources */,
-				B9C899CC1B38185E009C4740 /* left thigh.png in Resources */,
+				B9C899E01B38A481009C4740 /* left thigh.png in Resources */,
 				B9C8999F1B3811C3009C4740 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -237,7 +261,7 @@
 			files = (
 				B9C8999A1B3811C3009C4740 /* ViewController.swift in Sources */,
 				B9C899981B3811C3009C4740 /* AppDelegate.swift in Sources */,
-				B9C899B81B3811FC009C4740 /* KevView.swift in Sources */,
+				B9C899D61B38A440009C4740 /* KevView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
