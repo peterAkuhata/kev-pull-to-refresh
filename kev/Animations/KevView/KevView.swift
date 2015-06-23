@@ -63,7 +63,6 @@ class KevView : UIView {
 		let __scaling__ = UIView()
 		__scaling__.bounds = CGRect(x:0, y:0, width:164, height:93)
 		__scaling__.center = CGPoint(x:82.3, y:46.7)
-		__scaling__.layer.masksToBounds = true
 		self.addSubview(__scaling__)
 		viewsByName["__scaling__"] = __scaling__
 
@@ -187,6 +186,16 @@ class KevView : UIView {
 			self.animationCompletions[layer.animationForKey("FadeIn")] = complete
 		}
 
+		let kevRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+		kevRotationAnimation.duration = 1.000
+		kevRotationAnimation.values = [-3.177 as Float, 0.046 as Float]
+		kevRotationAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		kevRotationAnimation.timingFunctions = [linearTiming]
+		kevRotationAnimation.beginTime = beginTime
+		kevRotationAnimation.fillMode = fillMode
+		kevRotationAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["kev"]?.layer.addAnimation(kevRotationAnimation, forKey:"fade in_Rotation")
+
 		let kevOpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
 		kevOpacityAnimation.duration = 1.000
 		kevOpacityAnimation.values = [0.000 as Float, 1.000 as Float]
@@ -219,7 +228,7 @@ class KevView : UIView {
 
 		let kevTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
 		kevTranslationXAnimation.duration = 1.000
-		kevTranslationXAnimation.values = [0.000 as Float, 0.000 as Float]
+		kevTranslationXAnimation.values = [0.871 as Float, 0.000 as Float]
 		kevTranslationXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
 		kevTranslationXAnimation.timingFunctions = [linearTiming]
 		kevTranslationXAnimation.beginTime = beginTime
@@ -229,7 +238,7 @@ class KevView : UIView {
 
 		let kevTranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
 		kevTranslationYAnimation.duration = 1.000
-		kevTranslationYAnimation.values = [0.000 as Float, 0.000 as Float]
+		kevTranslationYAnimation.values = [-36.775 as Float, 0.000 as Float]
 		kevTranslationYAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
 		kevTranslationYAnimation.timingFunctions = [linearTiming]
 		kevTranslationYAnimation.beginTime = beginTime
@@ -240,11 +249,111 @@ class KevView : UIView {
 
 	func removeFadeInAnimation() {
 		self.layer.removeAnimationForKey("FadeIn")
+		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade in_Rotation")
 		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade in_Opacity")
 		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade in_ScaleX")
 		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade in_ScaleY")
 		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade in_TranslationX")
 		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade in_TranslationY")
+	}
+
+	// - MARK: fade out
+
+	func addFadeOutAnimation() {
+		addFadeOutAnimationWithBeginTime(0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: nil)
+	}
+
+	func addFadeOutAnimation(completion: ((Bool) -> Void)?) {
+		addFadeOutAnimationWithBeginTime(0, fillMode: kCAFillModeBoth, removedOnCompletion: false, completion: completion)
+	}
+
+	func addFadeOutAnimation(#removedOnCompletion: Bool) {
+		addFadeOutAnimationWithBeginTime(0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion: nil)
+	}
+
+	func addFadeOutAnimation(#removedOnCompletion: Bool, completion: ((Bool) -> Void)?) {
+		addFadeOutAnimationWithBeginTime(0, fillMode: removedOnCompletion ? kCAFillModeRemoved : kCAFillModeBoth, removedOnCompletion: removedOnCompletion, completion: completion)
+	}
+
+	func addFadeOutAnimationWithBeginTime(beginTime: CFTimeInterval, fillMode: String, removedOnCompletion: Bool, completion: ((Bool) -> Void)?) {
+		let linearTiming = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+		if let complete = completion {
+			let representativeAnimation = CABasicAnimation(keyPath: "not.a.real.key")
+			representativeAnimation.duration = 0.500
+			representativeAnimation.delegate = self
+			self.layer.addAnimation(representativeAnimation, forKey: "FadeOut")
+			self.animationCompletions[layer.animationForKey("FadeOut")] = complete
+		}
+
+		let kevRotationAnimation = CAKeyframeAnimation(keyPath: "transform.rotation.z")
+		kevRotationAnimation.duration = 0.500
+		kevRotationAnimation.values = [0.046 as Float, -3.177 as Float]
+		kevRotationAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		kevRotationAnimation.timingFunctions = [linearTiming]
+		kevRotationAnimation.beginTime = beginTime
+		kevRotationAnimation.fillMode = fillMode
+		kevRotationAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["kev"]?.layer.addAnimation(kevRotationAnimation, forKey:"fade out_Rotation")
+
+		let kevOpacityAnimation = CAKeyframeAnimation(keyPath: "opacity")
+		kevOpacityAnimation.duration = 0.500
+		kevOpacityAnimation.values = [1.000 as Float, 0.000 as Float]
+		kevOpacityAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		kevOpacityAnimation.timingFunctions = [linearTiming]
+		kevOpacityAnimation.beginTime = beginTime
+		kevOpacityAnimation.fillMode = fillMode
+		kevOpacityAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["kev"]?.layer.addAnimation(kevOpacityAnimation, forKey:"fade out_Opacity")
+
+		let kevScaleXAnimation = CAKeyframeAnimation(keyPath: "transform.scale.x")
+		kevScaleXAnimation.duration = 0.500
+		kevScaleXAnimation.values = [1.000 as Float, 0.215 as Float]
+		kevScaleXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		kevScaleXAnimation.timingFunctions = [linearTiming]
+		kevScaleXAnimation.beginTime = beginTime
+		kevScaleXAnimation.fillMode = fillMode
+		kevScaleXAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["kev"]?.layer.addAnimation(kevScaleXAnimation, forKey:"fade out_ScaleX")
+
+		let kevScaleYAnimation = CAKeyframeAnimation(keyPath: "transform.scale.y")
+		kevScaleYAnimation.duration = 0.500
+		kevScaleYAnimation.values = [1.000 as Float, 0.215 as Float]
+		kevScaleYAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		kevScaleYAnimation.timingFunctions = [linearTiming]
+		kevScaleYAnimation.beginTime = beginTime
+		kevScaleYAnimation.fillMode = fillMode
+		kevScaleYAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["kev"]?.layer.addAnimation(kevScaleYAnimation, forKey:"fade out_ScaleY")
+
+		let kevTranslationXAnimation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+		kevTranslationXAnimation.duration = 0.500
+		kevTranslationXAnimation.values = [0.000 as Float, 0.871 as Float]
+		kevTranslationXAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		kevTranslationXAnimation.timingFunctions = [linearTiming]
+		kevTranslationXAnimation.beginTime = beginTime
+		kevTranslationXAnimation.fillMode = fillMode
+		kevTranslationXAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["kev"]?.layer.addAnimation(kevTranslationXAnimation, forKey:"fade out_TranslationX")
+
+		let kevTranslationYAnimation = CAKeyframeAnimation(keyPath: "transform.translation.y")
+		kevTranslationYAnimation.duration = 0.500
+		kevTranslationYAnimation.values = [0.000 as Float, -36.775 as Float]
+		kevTranslationYAnimation.keyTimes = [0.000 as Float, 1.000 as Float]
+		kevTranslationYAnimation.timingFunctions = [linearTiming]
+		kevTranslationYAnimation.beginTime = beginTime
+		kevTranslationYAnimation.fillMode = fillMode
+		kevTranslationYAnimation.removedOnCompletion = removedOnCompletion
+		self.viewsByName["kev"]?.layer.addAnimation(kevTranslationYAnimation, forKey:"fade out_TranslationY")
+	}
+
+	func removeFadeOutAnimation() {
+		self.layer.removeAnimationForKey("FadeOut")
+		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade out_Rotation")
+		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade out_Opacity")
+		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade out_ScaleX")
+		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade out_ScaleY")
+		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade out_TranslationX")
+		self.viewsByName["kev"]?.layer.removeAnimationForKey("fade out_TranslationY")
 	}
 
 	// - MARK: walking
@@ -337,6 +446,7 @@ class KevView : UIView {
 		for subview in viewsByName.values {
 			subview.layer.removeAllAnimations()
 		}
+		self.layer.removeAnimationForKey("FadeOut")
 		self.layer.removeAnimationForKey("FadeIn")
 	}
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		B9C899981B3811C3009C4740 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C899971B3811C3009C4740 /* AppDelegate.swift */; };
-		B9C8999A1B3811C3009C4740 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C899991B3811C3009C4740 /* ViewController.swift */; };
 		B9C8999D1B3811C3009C4740 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9C8999B1B3811C3009C4740 /* Main.storyboard */; };
 		B9C8999F1B3811C3009C4740 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B9C8999E1B3811C3009C4740 /* Images.xcassets */; };
 		B9C899A21B3811C3009C4740 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B9C899A01B3811C3009C4740 /* LaunchScreen.xib */; };
@@ -19,6 +18,7 @@
 		B9C899E01B38A481009C4740 /* left thigh.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899DB1B38A481009C4740 /* left thigh.png */; };
 		B9C899E11B38A481009C4740 /* right foot.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899DC1B38A481009C4740 /* right foot.png */; };
 		B9C899E21B38A481009C4740 /* right thigh.png in Resources */ = {isa = PBXBuildFile; fileRef = B9C899DD1B38A481009C4740 /* right thigh.png */; };
+		B9C899E51B38AF51009C4740 /* TradeMeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9C899E41B38AF51009C4740 /* TradeMeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,6 @@
 		B9C899921B3811C3009C4740 /* kev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kev.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9C899961B3811C3009C4740 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9C899971B3811C3009C4740 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B9C899991B3811C3009C4740 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B9C8999C1B3811C3009C4740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B9C8999E1B3811C3009C4740 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B9C899A11B3811C3009C4740 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -48,6 +47,7 @@
 		B9C899DB1B38A481009C4740 /* left thigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "left thigh.png"; path = "Animations/KevView/images/left thigh.png"; sourceTree = "<group>"; };
 		B9C899DC1B38A481009C4740 /* right foot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "right foot.png"; path = "Animations/KevView/images/right foot.png"; sourceTree = "<group>"; };
 		B9C899DD1B38A481009C4740 /* right thigh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "right thigh.png"; path = "Animations/KevView/images/right thigh.png"; sourceTree = "<group>"; };
+		B9C899E41B38AF51009C4740 /* TradeMeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TradeMeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +89,9 @@
 		B9C899941B3811C3009C4740 /* kev */ = {
 			isa = PBXGroup;
 			children = (
-				B9C899E31B38A486009C4740 /* Animations */,
+				B9C899D71B38A461009C4740 /* KevView */,
 				B9C899971B3811C3009C4740 /* AppDelegate.swift */,
-				B9C899991B3811C3009C4740 /* ViewController.swift */,
+				B9C899E41B38AF51009C4740 /* TradeMeTableViewController.swift */,
 				B9C8999B1B3811C3009C4740 /* Main.storyboard */,
 				B9C8999E1B3811C3009C4740 /* Images.xcassets */,
 				B9C899A01B3811C3009C4740 /* LaunchScreen.xib */,
@@ -144,14 +144,6 @@
 				B9C899DD1B38A481009C4740 /* right thigh.png */,
 			);
 			name = Images;
-			sourceTree = "<group>";
-		};
-		B9C899E31B38A486009C4740 /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				B9C899D71B38A461009C4740 /* KevView */,
-			);
-			name = Animations;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,7 +251,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9C8999A1B3811C3009C4740 /* ViewController.swift in Sources */,
+				B9C899E51B38AF51009C4740 /* TradeMeTableViewController.swift in Sources */,
 				B9C899981B3811C3009C4740 /* AppDelegate.swift in Sources */,
 				B9C899D61B38A440009C4740 /* KevView.swift in Sources */,
 			);
